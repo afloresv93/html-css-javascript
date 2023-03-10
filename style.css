@@ -1,3 +1,8 @@
-h1, h2 {
-  font-family: Lato;
+h1 {
+  font-family: 'dinot-regular';
+  
+}
+
+h2 {
+  font-family: 'dinot-bold';
 }
