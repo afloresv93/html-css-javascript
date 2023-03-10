@@ -6,11 +6,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
     <script type="application/javascript">
-      function refresh() {
-        console.log('teest')
+      function niubizExpired() {
+        var sDate = document.getElementById('js-niubiz-expire-date').textContent;
+        var sLink = document.getElementById('js-niubiz-expire-link').textContent;
+
+        // MM/dd/yy H:m:s a
+        var dtDate = new Date( Date.parse(sDate) );
+        var countDownDate = dtDate.getTime();
+        var beforeDistance = countDownDate - new Date().getTime();
+        if ( (beforeDistance - 60000) > 0 ) {
+          setTimeout(() => {
+            document.getElementById('js-niubiz-button').classList.remove('disabled');
+            document.getElementById('js-niubiz-link').setAttribute('href', sLink);
+          }, 1000);
+        }
+
+        var x = setInterval(function() {
+          var now = new Date().getTime();
+
+          var distance = countDownDate - now;
+
+          var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          
+          const sDay = ( days > 1 ) ? ' dias, ' : ' día, ';
+          const sHour = ( hours > 1 ) ? ' horas y ' : ' hora y ';
+          const sMinute = ( minutes > 1 ) ? ' minutos ' : ' minuto';
+
+          document.getElementById('js-niubiz-countdown').textContent = 'Expira en: ' + days + sDay + hours + sHour + minutes + sMinute;
+
+          if ((distance - 60000) < 0) {
+            clearInterval(x);
+            document.getElementById('js-niubiz-countdown').textContent = "EXPIRADO";
+            document.getElementById('js-niubiz-button').classList.add('disabled');
+            document.getElementById('js-niubiz-link').setAttribute('href', "");
+          }
+        }, 1000);
+        
       };
 
-      refresh();
+      document.addEventListener("DOMContentLoaded", function(event){
+        niubizExpired();
+      });
     </script>
     <style type="text/css">
         @font-face {
@@ -36,13 +74,146 @@
           font-weight: bold;
           font-style: normal;
         }
+
+        p {
+          margin: 0px;
+        }
+
+        .hidden {
+          display: none;
+        }
+
+        .container {
+          position: relative;
+          height: 317px;
+        }
+
+        .container .logo {
+          position: absolute;
+          right: 0px;
+        }
+
+        .container .fondo {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
+        .header {
+          font-family: 'dinot-regular', 'Arial', 'Helvetica', 'sans-serif';
+          font-size: 31px;
+          color: white;
+          background-color: #989898;
+          text-align: center;
+          padding: 15px 0px;
+        }
+
+        .header p:last-child {
+          font-family: 'dinot-bold', 'Arial', 'Helvetica', 'sans-serif';
+        }
+
+        .thanks {
+          font-family: 'dinot-regular', 'Arial', 'Helvetica', 'sans-serif';
+          font-size: 19px;
+          text-align: center;
+          margin: 40px 0px;
+        }
+
+        .niubiz {
+          font-family: 'dinot-bold', 'Arial', 'Helvetica', 'sans-serif';
+          font-size: 19px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .niubiz-container {
+          text-align: center;
+          border: 2px solid #E8E8E8;
+          padding: 15px;
+          width: 445px;
+          display: flex;
+          flex-direction: column;
+          row-gap: 10px;
+        }
+
+        .niubiz-container div:first-child {
+          background-color: #E8E8E8;
+          padding: 10px;
+        }
+
+        .niubiz-container img {
+          height: 24px;
+        }
+
+        .niubiz-text p:first-child {
+          font-family: 'dinot-regular', 'Arial', 'Helvetica', 'sans-serif';
+          color: #717171;
+        }
+
+        .niubiz-text p:last-child {
+          color: #606060;
+        }
+
+        .niubiz-button {
+          background-color: #EE3229;
+          width: 180px;
+          align-self: center;
+          padding: 10px 0px;
+          border-radius: 10px
+        }
+
+        .niubiz-button.disabled {
+          background-color: #cccccc;
+          border-color: #cccccc;
+        }
+
+        .niubiz-button.disabled a{
+          cursor: not-allowed;
+          pointer-events: none;
+        }
+
+        .niubiz-button a{
+          color: white;
+          text-decoration: none;
+        }
+        
     </style>
   </head>
   <body>
-    <div>
-      <img class="niubiz" src="./assets/images/logo.png" title="logo"/>
+    <div class="container">
+      <img class="fondo" src="./assets/images/fondo.png" title="fondo"/>
+      <img class="logo" src="./assets/images/logo.png" title="logo"/>
     </div>
-    <h1>Test</h1>
-    <h2>Test 2</h2>
+    <div class="header">
+      <p>TU PEDIDO Nº 11035698</p>
+      <p>¡HA SIDO RESERVADO!</p>
+    </div>
+    <div class="thanks">
+      <p>Hola Alberto Rojas</p>
+      <p>¡Gracias por hacernos parte de tu proyecto!</p>
+    </div>
+    <div class="niubiz">
+      <div class="niubiz-container">
+
+        <p id="js-niubiz-expire-date" class="hidden">03/15/23 08:52 PM</p>
+        <p id="js-niubiz-expire-link" class="hidden">https://apitestenv.vnforapps.com/pagoseguro/l/kuy921sAk0vm</p>
+
+        <div>
+          <img src="./assets/images/niubiz.png" title="niubiz">
+          <div class="niubiz-text">
+            <p>Pago Link</p>
+            <p id="js-niubiz-countdown">EXPIRADO</p>
+          </div>
+        </div>
+
+        <div id="js-niubiz-button" class="niubiz-button disabled">
+          <a id="js-niubiz-link" href="" target="_blank">ENLACE DE PAGO</a>
+        </div>
+
+      </div>
+      
+    </div>
   </body>
 </html>
