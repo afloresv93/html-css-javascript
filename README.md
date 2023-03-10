@@ -1,3 +1,3 @@
-# html-css-javascript
+# html-css-javascrip
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/html-css-javascript-basic-jamd9k)
+vsCode live server
