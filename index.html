@@ -1,220 +1,101 @@
-<!doctype html>
-<html lang="es">
-  <head>
-    <meta charset="utf-8">
-    <title>Angelfv93</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <script type="application/javascript">
-      function niubizExpired() {
-        var sDate = document.getElementById('js-niubiz-expire-date').textContent;
-        var sLink = document.getElementById('js-niubiz-expire-link').textContent;
-
-        // MM/dd/yy H:m:s a
-        var dtDate = new Date( Date.parse(sDate) );
-        var countDownDate = dtDate.getTime();
-        var beforeDistance = countDownDate - new Date().getTime();
-        if ( (beforeDistance - 60000) > 0 ) {
-          setTimeout(() => {
-            document.getElementById('js-niubiz-button').classList.remove('disabled');
-            document.getElementById('js-niubiz-link').setAttribute('href', sLink);
-          }, 1000);
-        }
-
-        var x = setInterval(function() {
-          var now = new Date().getTime();
-
-          var distance = countDownDate - now;
-
-          var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-          var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-          
-          const sDay = ( days > 1 ) ? ' dias, ' : ' día, ';
-          const sHour = ( hours > 1 ) ? ' horas y ' : ' hora y ';
-          const sMinute = ( minutes > 1 ) ? ' minutos ' : ' minuto';
-
-          document.getElementById('js-niubiz-countdown').textContent = 'Expira en: ' + days + sDay + hours + sHour + minutes + sMinute;
-
-          if ((distance - 60000) < 0) {
-            clearInterval(x);
-            document.getElementById('js-niubiz-countdown').textContent = "EXPIRADO";
-            document.getElementById('js-niubiz-button').classList.add('disabled');
-            document.getElementById('js-niubiz-link').setAttribute('href', "");
-          }
-        }, 1000);
-        
-      };
-
-      document.addEventListener("DOMContentLoaded", function(event){
-        niubizExpired();
-      });
-    </script>
-    <style type="text/css">
-        @font-face {
-          font-family: 'dinot-regular';
-          src: url('./assets/fonts/dinot-regular.eot');
-          src: local('dinot-regular'),
-          url('./assets/fonts/dinot-regular.eot?#iefix') format('embedded-opentype'),
-          url('./assets/fonts/dinot-regular.woff') format('woff'),
-          url('./assets/fonts/dinot-regular.ttf') format('truetype'),
-          url('./assets/fonts/dinot-regular.svg#dinot-regular') format('svg');
-          font-weight: normal;
-          font-style: normal;
-        }
-
-        @font-face {
-          font-family: 'dinot-bold';
-          src: url('./assets/fonts/dinot-bold.eot');
-          src: local('dinot-bold'),
-          url('./assets/fonts/dinot-bold.eot?#iefix') format('embedded-opentype'),
-          url('./assets/fonts/dinot-bold.woff') format('woff'),
-          url('./assets/fonts/dinot-bold.ttf') format('truetype'),
-          url('./assets/fonts/dinot-bold.svg#dinot-bold') format('svg');
-          font-weight: bold;
-          font-style: normal;
-        }
-
-        p {
-          margin: 0px;
-        }
-
-        .hidden {
-          display: none;
-        }
-
-        .container {
-          position: relative;
-          height: 317px;
-        }
-
-        .container .logo {
-          position: absolute;
-          right: 0px;
-        }
-
-        .container .fondo {
-          position: absolute;
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-        }
-
-        .header {
-          font-family: 'dinot-regular', 'Arial', 'Helvetica', 'sans-serif';
-          font-size: 31px;
-          color: white;
-          background-color: #989898;
-          text-align: center;
-          padding: 15px 0px;
-          text-transform: uppercase;
-        }
-
-        .header p:last-child {
-          font-family: 'dinot-bold', 'Arial', 'Helvetica', 'sans-serif';
-        }
-
-        .thanks {
-          font-family: 'dinot-regular', 'Arial', 'Helvetica', 'sans-serif';
-          font-size: 19px;
-          text-align: center;
-          margin: 40px 0px;
-        }
-
-        .niubiz {
-          font-family: 'dinot-bold', 'Arial', 'Helvetica', 'sans-serif';
-          font-size: 19px;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-        }
-
-        .niubiz-container {
-          text-align: center;
-          border: 2px solid #E8E8E8;
-          padding: 15px;
-          width: 445px;
-          display: flex;
-          flex-direction: column;
-          row-gap: 10px;
-        }
-
-        .niubiz-container div:first-child {
-          background-color: #E8E8E8;
-          padding: 10px;
-        }
-
-        .niubiz-container img {
-          height: 24px;
-        }
-
-        .niubiz-text p:first-child {
-          font-family: 'dinot-regular', 'Arial', 'Helvetica', 'sans-serif';
-          color: #717171;
-        }
-
-        .niubiz-text p:last-child {
-          color: #606060;
-        }
-
-        .niubiz-button {
-          background-color: #EE3229;
-          width: 180px;
-          align-self: center;
-          padding: 10px 0px;
-          border-radius: 10px
-        }
-
-        .niubiz-button.disabled {
-          background-color: #cccccc;
-          border-color: #cccccc;
-        }
-
-        .niubiz-button.disabled a{
-          cursor: not-allowed;
-          pointer-events: none;
-        }
-
-        .niubiz-button a{
-          color: white;
-          text-decoration: none;
-        }
-        
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <img class="fondo" src="./assets/images/fondo.png" title="fondo"/>
-      <img class="logo" src="./assets/images/logo.png" title="logo"/>
-    </div>
-    <div class="header">
-      <p>Tu pedido Nº 11035698</p>
-      <p>¡Ha sido reservado!</p>
-    </div>
-    <div class="thanks">
-      <p>Hola Alberto Rojas</p>
-      <p>¡Gracias por hacernos parte de tu proyecto!</p>
-    </div>
-    <div class="niubiz">
-      <div class="niubiz-container">
-
-        <p id="js-niubiz-expire-date" class="hidden">03/15/23 08:52 PM</p>
-        <p id="js-niubiz-expire-link" class="hidden">https://apitestenv.vnforapps.com/pagoseguro/l/kuy921sAk0vm</p>
-
-        <div>
-          <img src="./assets/images/niubiz.png" title="niubiz">
-          <div class="niubiz-text">
-            <p>Pago Link</p>
-            <p id="js-niubiz-countdown">EXPIRADO</p>
-          </div>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script type="text/javascript" src="index.js"></script>
+</head>
+<body>
+    <div style="display: none;">
+      <div class="TitlesButton" style="flex-direction: column;justify-content: center;align-items: center;gap: 15px;display: flex;margin-top: 20px;">
+        <div class="Title" style="text-align: center;color: #111111;font-size: 48px;font-family: Oswald;font-weight: 700;text-transform: uppercase;word-wrap: break-word">TÍTULO</div>
+        <div class="Body" style="text-align: center;color: black;font-size: 16px;font-family: 'Oswald';font-weight: 300;line-height: 30px;letter-spacing: 0.80px;word-wrap: break-word;">Lorem ipsum</div>
+        <div class="ButtonPrincipalDesktop" style="width: 267px;height: 48px;padding-left: 80px;padding-right: 80px;padding-top: 10px;padding-bottom: 10px;background: #1C4DA1;justify-content: center;align-items: center;display: flex;">
+          <div class="Comprar" style="text-align: center; color: white; font-size: 24px; font-family: Oswald; font-weight: 400; letter-spacing: 1.20px; word-wrap: break-word">button</div>
         </div>
-
-        <div id="js-niubiz-button" class="niubiz-button disabled">
-          <a id="js-niubiz-link" href="" target="_blank">ENLACE DE PAGO</a>
-        </div>
-
       </div>
       
+      <span style="font-family: Oswald;font-weight: 500;text-transform: uppercase;padding-left: 50px;font-size: 24px;color: #111111;">DESCUENTOS EXCLUSIVOS EN TIENDA</span>
+      
+      <span style="font-family: Oswald;font-weight: 500;text-transform: uppercase;padding-left: 50px;font-size: 24px;color: #111111;margin-top: 50px;display: block;margin-bottom: 20px;">TODO EN DEPORTE LO ENCUENTRAS AQUI</span>
+      
+      <span style="font-family: Oswald;font-weight: 500;text-transform: uppercase;margin-top: 50px;display: block;font-size: 24px;text-align: center;margin-bottom: 10px;">las mejores marcas con descuento</span>
+      
+      <div style="
+          display: flex;
+          justify-content: center;
+          column-gap: 20px;
+          margin-bottom: 50px;
+      "><a><svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" fill="none" viewBox="0 0 150 150">
+        <path fill="#020203" d="M39.95 91.012c-2.675-.1-4.875-.837-6.588-2.2-.325-.262-1.112-1.037-1.362-1.375-.7-.875-1.163-1.725-1.488-2.675-.974-2.9-.474-6.712 1.425-10.9 1.625-3.587 4.138-7.137 8.513-12.05.65-.725 2.563-2.837 2.575-2.837 0 0-.1.175-.237.4-1.138 1.9-2.113 4.15-2.638 6.1-.85 3.112-.75 5.8.3 7.875.725 1.425 1.962 2.662 3.362 3.35 2.45 1.2 6.026 1.3 10.4.287.3-.075 15.213-4.025 33.15-8.8 17.925-4.775 32.6-8.675 32.6-8.662 0 0-41.65 17.825-63.275 27.075-3.424 1.462-4.337 1.837-5.95 2.4-4.112 1.437-7.8 2.137-10.787 2.012Z"></path>
+      </svg>
+      </a><a><svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" fill="none" viewBox="0 0 150 150">
+      <path fill="#020203" d="M79.05 47.205c-.338.05-.675 1.312-1.325 1.962-.475.475-1.088.438-1.4 1.025-.125.213-.088.588-.213.95-.262.713-1.212.775-1.212 1.55 0 .838.787 1 1.475 1.6.537.475.587.813 1.237 1.038.55.187 1.375-.425 2.125-.2.613.175 1.188.312 1.325.937.125.575-.012 1.475-.75 1.363-.25-.025-1.325-.388-2.65-.25-1.6.175-3.425.7-3.6 2.487-.1 1 1.138 2.175 2.325 1.938.825-.163.438-1.138.888-1.6.587-.6 3.912 2.112 7.012 2.112 1.3 0 2.275-.325 3.238-1.337.087-.075.2-.238.337-.25.125.012.363.137.438.2 2.487 2 4.375 6.025 13.55 6.075 1.287.012 2.762.625 3.95 1.712 1.075.988 1.687 2.525 2.3 4.088.912 2.337 2.562 4.625 5.05 7.15.137.137 2.187 1.737 2.35 1.85.025.012.175.375.125.575-.063 1.512-.275 5.937 3.012 6.137.813.038.6-.525.6-.912 0-.775-.137-1.538.263-2.325.55-1.088-1.175-1.588-1.125-3.925.037-1.75-1.425-1.45-2.175-2.775-.425-.775-.813-1.175-.788-2.125.163-5.313-1.125-8.8-1.775-9.65-.5-.65-.925-.9-.462-1.2 2.75-1.813 3.375-3.513 3.375-3.513 1.462-3.437 2.775-6.575 4.587-7.962.363-.288 1.3-.988 1.875-1.263 1.688-.8 2.588-1.275 3.075-1.762.775-.763 1.388-2.338.65-3.3-.925-1.188-2.525-.238-3.237.175-5.05 3-5.8 8.287-7.55 11.337-1.4 2.425-3.663 4.213-5.7 4.363-1.525.112-3.163-.2-4.8-.913-3.975-1.75-6.15-4-6.663-4.387-1.062-.825-9.362-8.963-16.075-9.3 0 0-.837-1.663-1.037-1.7-.488-.063-1 1-1.35 1.125-.35.1-.925-1.163-1.275-1.1ZM49.487 95.78c-.637-.013-1.175-.538-1.175-1.175v-20.95h-6.9v23.1c0 1.137.913 2.062 2.038 2.062h12.075a2.043 2.043 0 0 0 2.037-2.062v-23.1h-6.9l-.012 20.95c.012.637-.525 1.162-1.163 1.175ZM72.6 73.655H62.15c-1.238 0-2.25 1-2.25 2.25v22.9h6.912v-21c0-.65.525-1.15 1.163-1.15.65 0 1.162.5 1.175 1.137v21.013h6.887V77.78a1.158 1.158 0 0 1 1.175-1.138c.638 0 1.163.513 1.175 1.15v21H85.3V75.905c0-1.25-1.013-2.25-2.25-2.25H72.6Zm-40.425 4.187c0-.7-.563-1.2-1.175-1.2h-1.175v12.725H31c.612 0 1.175-.487 1.175-1.175v-10.35ZM36.8 92.48h-6.975v6.325h-6.9v-25.15H36.85c1.25 0 2.225 1.012 2.225 2.262v14.3A2.265 2.265 0 0 1 36.8 92.48Z"/>
+      <path fill="#020203" d="M96.887 89.367V77.792a1.158 1.158 0 0 0-1.175-1.138c-.638 0-1.163.513-1.175 1.15v11.563h2.35Zm0 9.437v-6.312h-2.35v6.312h-6.9v-22.9c0-1.25 1.012-2.25 2.25-2.25h11.65c1.237 0 2.25 1 2.25 2.25v22.9h-6.9Z"/>
+      </svg>
+      </a><a><svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" fill="none" viewBox="0 0 150 150">
+      <path fill="#020203" d="M91.575 99.87h20.35L99.25 78.77l-14.013-23.3-5.762 3.476-9.162 5.5 9.162 15.262 12.1 20.163Zm-7.138 0-4.963-8.3-12.2-20.3-14.462 8.7-.488.288.488.825 11.3 18.788h20.325Zm-31.625 0h4.163l-4.163-6.937-3.512-5.85-14.95 8.975 2.275 3.813h16.187Z"/>
+      </svg>
+      </a><a><svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" fill="none" viewBox="0 0 150 150">
+        <path fill="#010202" d="M60.874 72.762c.013-.05.038-.137.475-.112 4.25.175 14.713.912 26.188 3.912 14.95 3.9 20.725 7.313 15.962 8.3-4.737.988-23.125.5-42.787 13.025-1.363.875-3.425 1.988-8.55.438-1.95-.588-4.338-1.413-7.15-2.875-12.075-6.275 21.675-10.563 27.637-11.388 6.838-.937 13.725-1.512 7.55-4.887-1.5-.813-5.4-2.95-18.85-6.125 0 0-.512-.1-.475-.288ZM44.162 52.4c.262-.813.725-1.275 2.5-1.275h4.775c2.987 0 4.937.55 5.962 1.675.675.738.938 1.713.813 2.975-.3 3.063-1.875 4.813-5.288 5.875l-.15.05 2.363 6.2a.306.306 0 0 1-.288.412h-2.937c-.813 0-1.513-.474-1.725-1.187l-1.775-4.663h-2.9l-1.688 5.425c-.062.225-.337.425-.587.425h-3.613a.284.284 0 0 1-.275-.374L44.162 52.4Zm3.862 2.025-1.475 4.738h2.813c2.15 0 4.012 0 4.287-2.788.05-.525-.062-.925-.337-1.225-.45-.5-1.363-.725-2.925-.725h-2.363ZM82.225 68.55c-2.3 0-4.3-.837-5.363-2.237-.825-1.088-1.025-2.463-.612-3.988l.887-3.137c1.75-6.125 4.525-8.288 10.638-8.288h.25c2.3 0 4.3.838 5.362 2.238.825 1.087 1.025 2.462.613 3.987l-.888 3.138c-1.737 6.112-3.612 8.287-10.637 8.287h-.25Zm4.537-13.987c-2.562.05-4.1 1.45-4.987 4.537l-.788 2.825c-.112.438-.15.825-.137 1.175.137 1.15 1.012 1.75 2.625 1.775 2.575-.05 4.112-1.45 4.987-4.537l.788-2.825c.112-.438.15-.838.137-1.175-.125-1.15-1-1.738-2.625-1.775Zm9.775 13.75c.25 0 .513-.2.588-.425l2.125-6.863a.632.632 0 0 1 .525.325l3.025 5.875a1.965 1.965 0 0 0 1.762 1.075h3.15c.213 0 .35-.225.25-.4l-3.812-7.45a.459.459 0 0 1 .1-.538l9.162-8.437a.2.2 0 0 0-.137-.35h-3.713c-.612 0-1.225.25-1.662.688l-7.238 6.774c-.2.188-.45.288-.725.288l2.275-7.35a.308.308 0 0 0-.3-.4h-3.625a.582.582 0 0 0-.55.4l-5.112 16.413c-.063.187.087.374.275.374h3.637Zm27.675-13.825h-3.7c-1.375 0-2.662.225-2.825 1.825-.062.663.45 1 1.475 1.413l3.05 1.1c1.725.612 2.638 2.012 2.425 3.75-.575 4.762-4.037 5.75-9.075 5.75h-5.687a.407.407 0 0 1-.4-.45c.337-2.975 3.425-2.9 3.425-2.9h3.737c2.013 0 3.113-.775 3.263-2.3.075-.75-.375-1.3-1.475-1.8l-3.013-1.088c-1.662-.675-2.525-1.9-2.375-3.337.488-4.438 3.675-5.338 8.65-5.338h5.625c.238 0 .4.213.363.438-.163.925-.85 2.937-3.463 2.937ZM64.137 68.55c-2.3 0-4.3-.837-5.362-2.237-.825-1.088-1.026-2.463-.613-3.988l.888-3.137c1.75-6.125 4.525-8.288 10.637-8.288h.25c2.3 0 4.3.838 5.362 2.238.825 1.087 1.025 2.462.613 3.987l-.888 3.138c-1.737 6.112-3.612 8.287-10.637 8.287h-.25Zm4.537-13.987c-2.562.05-4.1 1.45-4.987 4.537l-.787 2.825c-.113.438-.15.825-.138 1.175.138 1.15 1.013 1.75 2.625 1.775 2.575-.05 4.112-1.45 4.987-4.537l.788-2.825c.112-.438.15-.838.137-1.175-.125-1.15-1.012-1.738-2.625-1.775ZM34.9 51.138c2.55 0 4.412.575 5.387 1.65.587.65.85 1.487.75 2.475-.2 2.05-1.175 3.187-3.588 4.162l-.275.113.263.15c1.037.612 1.6 1.774 1.475 3.05-.538 5.575-5.2 5.575-10.138 5.575h-3.987c-.875-.013-1.863.05-2.2-.288-.488-.5-.2-1.325-.2-1.325l4.425-14.3c.25-.813.725-1.275 2.5-1.275l5.587.013Zm-4.263 13.875c1.662 0 3.675.15 3.837-2.063.038-.538-.087-.975-.387-1.3-.413-.45-1.175-.6-2.225-.6h-3.25l-1.225 3.963h3.25Zm-1.075-7h3.262c2.1 0 3.5-.25 3.7-1.988.05-.438-.037-.775-.262-1.038-.438-.487-1.413-.537-3.338-.537h-2.262l-1.1 3.563Z"/>
+      </svg>
+      </a><a><svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" fill="none" viewBox="0 0 150 150">
+      <path fill="#020203" d="M26.6 92.787a8.02 8.02 0 0 1-4.175-1.262c-1.475-.925-2.187-2.375-2.387-4.075a6.497 6.497 0 0 1-.063-.488c0-.375-.012-.75-.012-1.125l.037-.4c.138-1.187.4-2.337.913-3.425.275-.587.6-1.162.925-1.725 2.15-3.8 5.287-6.65 8.95-8.9 2.5-1.537 5.112-2.925 8.037-3.562 1.4-.313 2.8-.475 4.213-.225 2.062.375 3.15 1.9 2.837 3.95-.012.075-.012.15-.012.225.05-.025.112-.05.15-.088 1.875-2.15 3.4-4.512 3.987-7.35.538-2.537-.837-4.375-3.45-4.787-1.962-.313-3.85.062-5.712.612-2.438.713-4.725 1.75-6.913 3.05-.625.375-1.225.788-1.837 1.2-.188.125-.35.175-.513-.05-.175-.225-.025-.325.125-.45 3.95-3.187 8.338-5.5 13.338-6.537 1.887-.4 3.812-.4 5.712-.05a5.317 5.317 0 0 1 1.788.662c2.325 1.375 3.187 3.513 3.125 6.1-.038 1.725-.525 3.338-1.125 4.938-1.65 4.437-4.388 8.187-7.438 11.737-.625.725-1.337 1.388-1.987 2.1-3.25 3.488-6.95 6.388-11.288 8.4A16.69 16.69 0 0 1 27.75 92.8c-.387-.013-.762-.013-1.15-.013Zm15.088-22.962c-2.075-.05-3.875.837-5.688 1.662-1.112.513-2.037 1.3-2.962 2.1-1.638 1.425-3.05 3.025-4.05 4.975-.738 1.45-.4 3.313 1.687 3.738.525.112 1.05.125 1.575.025 1.375-.263 2.638-.825 3.85-1.513 2.513-1.437 4.663-3.325 6.613-5.45.875-.95 1.287-2.075 1.45-3.325.137-1.05-.475-1.9-1.5-2.137-.325-.075-.65-.075-.975-.075ZM66.55 86.812c-1.45-.025-3.212.088-4.962-.15-1.825-.25-3.45-.912-4.438-2.587-1.125-1.913-.937-3.863.063-5.75 1.087-2.075 2.912-3.338 4.975-4.288a10.326 10.326 0 0 1 4.9-.95c1.012.05 2.025 0 3.037.013.4 0 .6-.163.675-.55.075-.4.2-.788.263-1.188.112-.737-.213-1.237-.938-1.45-.387-.112-.8-.125-1.2-.125-1.912 0-3.837-.012-5.75 0-.462 0-.562-.112-.425-.562.338-1.1.638-2.213.938-3.325.1-.375.325-.55.7-.55 2.25.012 4.487-.013 6.737.012 3.35.05 5.725 3.263 4.775 6.5-.437 1.525-.9 3.05-1.25 4.6-.725 3.238-1.762 6.388-2.587 9.6-.188.738-.2.738-1 .738-1.4.025-2.8.012-4.513.012Zm-.875-4.437c.688 0 1.375 0 2.05.012.213 0 .35-.037.413-.262.4-1.438.8-2.875 1.212-4.313.075-.275-.012-.362-.287-.362-1.2.012-2.4-.038-3.6.012-1.6.063-2.788.788-3.413 2.313-.562 1.4.15 2.537 1.663 2.6.65.012 1.312 0 1.962 0ZM79.063 86.8h-4.4c-.25 0-.3-.075-.275-.337.15-1.263.637-2.438.9-3.663.075-.362.362-.412.687-.412h5.85c.613 0 1.213-.05 1.813-.2.712-.175 1.05-.688 1.162-1.363.1-.625-.112-1.125-.637-1.487-1.05-.713-2.15-1.338-3.238-1.975-.762-.45-1.537-.9-2.187-1.513-1.675-1.537-1.9-3.412-1.138-5.437 1.125-3 3.413-4.588 6.513-4.95 2.412-.288 4.862-.075 7.287-.1.3 0 .388.112.313.4-.338 1.2-.663 2.4-.988 3.612-.1.375-.362.425-.675.425h-5.712c-.738 0-1.388.188-1.863.8-.462.6-.412 1.05.15 1.55.725.638 1.6 1.088 2.413 1.6.712.45 1.462.825 2.175 1.275 2.3 1.438 3.075 3.475 2.25 6.063-.475 1.5-1.113 2.912-2.325 3.987-1.125.988-2.45 1.525-3.938 1.638-1.362.075-2.75.075-4.137.087Zm37.975.013c-1.313 0-2.625-.013-3.925 0-.375 0-.488-.1-.375-.488.337-1.162.662-2.337.962-3.512.088-.338.25-.438.588-.438 1.975.013 3.962 0 5.937.013.575 0 1.15-.038 1.713-.2.675-.188 1.1-.638 1.25-1.313.15-.687-.163-1.187-.725-1.537-1.25-.788-2.525-1.55-3.788-2.325-.675-.413-1.337-.863-1.9-1.438-1.175-1.212-1.537-2.662-1.137-4.275.875-3.45 3.212-5.425 6.987-5.85 2.375-.275 4.763-.05 7.15-.1.313 0 .325.125.25.375-.337 1.213-.675 2.425-.987 3.65-.1.4-.363.4-.675.4h-5.75c-.725 0-1.35.2-1.813.788-.475.587-.437 1.037.125 1.537.725.638 1.563 1.075 2.388 1.538.812.462 1.625.912 2.4 1.437 1.637 1.1 2.487 2.575 2.35 4.575-.188 2.638-1.975 5.838-5.013 6.7-1.075.3-2.175.413-3.275.438-.9.037-1.812.025-2.737.025Zm-9.25-.001c-1.562.038-3.112-.012-4.625-.512-3.275-1.088-5.225-4.05-4.987-7.5.175-2.588.912-5 2.387-7.138 1.088-1.562 2.45-2.85 4.038-3.925 2.475-1.675 5.237-2.25 8.15-2.35.9-.025 1.812-.05 2.712-.087.288-.013.425.087.325.387-.387 1.15-.55 2.363-.875 3.525-.125.425-.35.575-.762.575-1.2.013-2.4-.075-3.6.113-.85.125-1.663.4-2.438.775-1 .487-1.975 1.012-2.687 1.887-1.438 1.775-2.388 3.738-2.188 6.125.175 2.125 1.863 3.563 3.863 3.675 1.35.075 2.712.038 4.075.025.4 0 .525.088.4.5-.35 1.2-.675 2.4-1 3.6-.075.263-.188.35-.45.338-.788-.013-1.563-.013-2.338-.013Zm-15.762-.025H90.25c-.688 0-.688 0-.513-.637.913-3.363 1.813-6.738 2.725-10.1.763-2.813 1.525-5.625 2.275-8.438.15-.55.175-1.137.35-1.687.125-.413.375-.575.788-.575 1.262.012 2.525.025 3.787 0 .388 0 .475.1.375.487A7260.774 7260.774 0 0 0 95.9 81.175c-.313 1.137-.638 2.275-.938 3.425-.15.6-.212 1.225-.387 1.825-.075.275-.213.375-.488.362-.7-.012-1.375 0-2.062 0Z"/>
+      <path fill="#3D3D3D" d="M26.6 92.788c.388 0 .763 0 1.15-.013-.387.213-.762.238-1.15.013Zm-6.637-5.825c.025.162.05.325.062.487-.125-.15-.125-.312-.062-.487ZM20 85.438l-.037.4c-.05-.138-.063-.275.037-.4Z"/>
+      </svg>
+      </a><a><svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" fill="none" viewBox="0 0 150 150">
+      <path fill="#020203" d="M79.05 47.205c-.338.05-.675 1.312-1.325 1.962-.475.475-1.088.438-1.4 1.025-.125.213-.088.588-.213.95-.262.713-1.212.775-1.212 1.55 0 .838.787 1 1.475 1.6.537.475.587.813 1.237 1.038.55.187 1.375-.425 2.125-.2.613.175 1.188.312 1.325.937.125.575-.012 1.475-.75 1.363-.25-.025-1.325-.388-2.65-.25-1.6.175-3.425.7-3.6 2.487-.1 1 1.138 2.175 2.325 1.938.825-.163.438-1.138.888-1.6.587-.6 3.912 2.112 7.012 2.112 1.3 0 2.275-.325 3.238-1.337.087-.075.2-.238.337-.25.125.012.363.137.438.2 2.487 2 4.375 6.025 13.55 6.075 1.287.012 2.762.625 3.95 1.712 1.075.988 1.687 2.525 2.3 4.088.912 2.337 2.562 4.625 5.05 7.15.137.137 2.187 1.737 2.35 1.85.025.012.175.375.125.575-.063 1.512-.275 5.937 3.012 6.137.813.038.6-.525.6-.912 0-.775-.137-1.538.263-2.325.55-1.088-1.175-1.588-1.125-3.925.037-1.75-1.425-1.45-2.175-2.775-.425-.775-.813-1.175-.788-2.125.163-5.313-1.125-8.8-1.775-9.65-.5-.65-.925-.9-.462-1.2 2.75-1.813 3.375-3.513 3.375-3.513 1.462-3.437 2.775-6.575 4.587-7.962.363-.288 1.3-.988 1.875-1.263 1.688-.8 2.588-1.275 3.075-1.762.775-.763 1.388-2.338.65-3.3-.925-1.188-2.525-.238-3.237.175-5.05 3-5.8 8.287-7.55 11.337-1.4 2.425-3.663 4.213-5.7 4.363-1.525.112-3.163-.2-4.8-.913-3.975-1.75-6.15-4-6.663-4.387-1.062-.825-9.362-8.963-16.075-9.3 0 0-.837-1.663-1.037-1.7-.488-.063-1 1-1.35 1.125-.35.1-.925-1.163-1.275-1.1ZM49.487 95.78c-.637-.013-1.175-.538-1.175-1.175v-20.95h-6.9v23.1c0 1.137.913 2.062 2.038 2.062h12.075a2.043 2.043 0 0 0 2.037-2.062v-23.1h-6.9l-.012 20.95c.012.637-.525 1.162-1.163 1.175ZM72.6 73.655H62.15c-1.238 0-2.25 1-2.25 2.25v22.9h6.912v-21c0-.65.525-1.15 1.163-1.15.65 0 1.162.5 1.175 1.137v21.013h6.887V77.78a1.158 1.158 0 0 1 1.175-1.138c.638 0 1.163.513 1.175 1.15v21H85.3V75.905c0-1.25-1.013-2.25-2.25-2.25H72.6Zm-40.425 4.187c0-.7-.563-1.2-1.175-1.2h-1.175v12.725H31c.612 0 1.175-.487 1.175-1.175v-10.35ZM36.8 92.48h-6.975v6.325h-6.9v-25.15H36.85c1.25 0 2.225 1.012 2.225 2.262v14.3A2.265 2.265 0 0 1 36.8 92.48Z"/>
+      <path fill="#020203" d="M96.887 89.367V77.792a1.158 1.158 0 0 0-1.175-1.138c-.638 0-1.163.513-1.175 1.15v11.563h2.35Zm0 9.437v-6.312h-2.35v6.312h-6.9v-22.9c0-1.25 1.012-2.25 2.25-2.25h11.65c1.237 0 2.25 1 2.25 2.25v22.9h-6.9Z"/>
+      </svg>
+      </a></div>
+      
+      <span style="font-family: Oswald;font-weight: 500;text-transform: uppercase;text-align: center;display: block;font-size: 24px;margin-bottom: 25px;">Preguntas frecuentes</span>
+      
     </div>
-  </body>
+    
+    <div style="display: flex; justify-content: center; column-gap: 133px;">
+      <div class="TextSide" style="width: 634px; height: 363px; border-radius: 20px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 20px; display: inline-flex">
+        <div class="Frame427318950" style="align-self: stretch; height: 118px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 10px; display: flex">
+          <div class="StrongGanaPuntosPorHacerLoQueMSTeGusta" style="color: black; font-size: 32px; font-family: Oswald; font-weight: 500; text-transform: uppercase; line-height: 48px; word-wrap: break-word">únete al team marathon</div>
+          <div class="Content" style="align-self: stretch; height: 60px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 24px; display: flex">
+            <div class="NeteANuestraComunidadYSElPrimeroEnDescubrirOfertasExclusivasTodoLoQueNecesitasParaTuDeporte" style="align-self: stretch; color: black; font-size: 16px; font-family: Oswald; font-weight: 300; line-height: 30px; letter-spacing: 0.80px; word-wrap: break-word">Únete a nuestra comunidad y sé el primero en descubrir ofertas exclusivas. ¡Todo lo que necesitas para tu deporte!</div>
+          </div>
+        </div>
+        <div class="Frame427318949" style="flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 40px; display: flex">
+          <div class="Beneficios" style="align-self: stretch; border-radius: 12px; justify-content: flex-start; align-items: flex-start; gap: 20px; display: inline-flex">
+            <svg xmlns="http://www.w3.org/2000/svg" width="43" height="32" fill="none" viewBox="0 0 43 32">
+              <path stroke="#1C4DA1" stroke-linecap="square" stroke-miterlimit="10" stroke-width="2" d="M41.5 1.863v29.105h-40v-9.105a5.448 5.448 0 0 0 0-10.895V1.863h40Z"></path>
+              <path stroke="#1C4DA1" stroke-miterlimit="10" stroke-width="2" d="M14.224 9.14h3.638m-3.638 7.277h3.638m-3.638 7.277h3.638"></path>
+            </svg>
+            <div class="Text" style="flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 10px; display: inline-flex">
+              <div class="Frame74" style="align-self: stretch; height: 61px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 8px; display: flex">
+                <div class="CuponesYDescuentos" style="align-self: stretch; color: #343434; font-size: 20px; font-family: Oswald; font-weight: 700; letter-spacing: 1px; word-wrap: break-word">Cupones y Descuentos</div>
+                <div class="CuponDeBienvenidaTuCumpleaOsAniversarioDescuentosPermanente" style="color: #343434; font-size: 16px; font-family: Oswald; font-weight: 300; line-height: 30px; letter-spacing: 0.80px; word-wrap: break-word">Cupon de bienvenida, tu cumpleaños, aniversario, descuentos permanente</div>
+              </div>
+            </div>
+          </div>
+          <div class="Beneficios" style="width: 469px; border-radius: 12px; justify-content: flex-start; align-items: flex-start; gap: 20px; display: inline-flex">
+            <svg xmlns="http://www.w3.org/2000/svg" width="41" height="41" fill="none" viewBox="0 0 41 41">
+              <path stroke="#1C4DA1" stroke-miterlimit="10" stroke-width="2" d="M10.95 36.78a3.183 3.183 0 1 0 0-6.366 3.183 3.183 0 0 0 0 6.367Zm19.1 0a3.183 3.183 0 1 0 0-6.366 3.183 3.183 0 0 0 0 6.367Z"></path>
+              <path stroke="#1C4DA1" stroke-miterlimit="10" stroke-width="2" d="M33.234 33.597H38v-9.55l-2.5-10.333a3.167 3.167 0 0 0-3.167-2.4h-5.467v22.283"></path>
+              <path stroke="#1C4DA1" stroke-miterlimit="10" stroke-width="2" d="M14.133 33.596h12.734v-7.967H3v7.967h4.767"></path>
+              <path stroke="#1C4DA1" stroke-miterlimit="10" stroke-width="2" d="M26.867 4.945H3V25.63h23.867V4.945Zm0 15.918h3.183l3.184 3.184H38"></path>
+            </svg>
+            <div class="Frame74" style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 10px; display: inline-flex">
+              <div class="EnvOGratis" style="align-self: stretch; color: #343434; font-size: 20px; font-family: Oswald; font-weight: 700; letter-spacing: 1px; word-wrap: break-word">Envío gratis</div>
+              <div class="AlSerMiembroTienesEnvOGratisATodoChile" style="color: #343434; font-size: 16px; font-family: Oswald; font-weight: 300; line-height: 30px; letter-spacing: 0.80px; word-wrap: break-word">Al ser miembro tienes envío gratis a todo Chile</div>
+            </div>
+          </div>
+        </div>
+        <div class="ButtonPrimaryMarathon" style="height: 41px; padding-left: 50px; padding-right: 50px; padding-top: 10px; padding-bottom: 10px; background: #1C4DA1; border-radius: 1px; justify-content: center; align-items: center; gap: 5px; display: inline-flex">
+          <div class="Button" style="text-align: center; color: white; font-size: 16px; font-family: Oswald; font-weight: 500; line-height: 30px; letter-spacing: 0.80px; word-wrap: break-word">QUIERO SER MIEMBRO</div>
+        </div>
+      </div>
+      <div>
+        <img src="./assets/images/snow.png" alt="" srcset="">
+      </div>
+    </div>
+
+</body>
 </html>

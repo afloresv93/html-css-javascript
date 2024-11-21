@@ -1,0 +1,1609 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+.accordion:after {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow-y: auto;
+  transition: max-height 0.2s ease-out;
+}
+</style>
+</head>
+<body>
+
+<h2>Accordion with symbols</h2>
+<p>In this example we have added a "plus" sign to each button. When the user clicks on the button, the "plus" sign is replaced with a "minus" sign.</p>
+<button class="accordion">Section 1</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">Section 2</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">Section 3</button>
+
+<div aria-hidden="false" class="panel" id="talla">
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:0">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              0</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:0-0">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              0-0</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:0-12">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              0-12</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:0-2">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              0-2</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:0-3">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              0-3</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:0-6">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              0-6</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:0-9">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              0-9</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:1">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              1</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:1+1%2F2">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              1 1/2</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:1+1%2F2+PLAZA">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              1 1/2 PLAZA</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:1+PLAZA">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              1 PLAZA</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:1-2">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              1-2</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:1.50+ANCHO">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              1.50 ANCHO</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:10">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              10</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:10+1%2F2">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              10 1/2</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:10-11">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              10-11</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:10-12">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              10-12</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:11">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              11</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:11+1%2F2">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              11 1/2</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:11-12">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              11-12</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:11-13">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              11-13</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:11-14">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              11-14</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:12">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              12</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:12+1%2F2">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              12 1/2</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:12+MESES">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              12 MESES</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:12-18">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              12-18</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:12-24">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              12-24</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:13">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              13</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:13+1%2F2">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              13 1/2</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:13-14">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              13-14</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:14">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              14</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:14+1%2F2">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              14 1/2</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:14-16">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              14-16</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:15">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              15</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:15+1%2F2">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              15 1/2</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:15-16">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              15-16</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:15-18">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              15-18</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:16">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              16</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:16+1%2F2">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              16 1/2</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:17">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              17</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:17+1%2F2">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              17 1/2</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:18">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              18</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:18+1%2F2">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              18 1/2</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:18+MESES">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              18 MESES</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:18-3">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              18-3</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:19">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              19</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:19+1%2F2">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              19 1/2</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:19-22">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              19-22</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:2">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              2</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:2+1%2F2">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              2 1/2</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:2+1%2F2+PLAZAS">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              2 1/2 PLAZAS</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:2+1%2F4+PLAZAS">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              2 1/4 PLAZAS</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:2+PLAZAS">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              2 PLAZAS</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:2-4">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              2-4</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:20">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              20</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:20+1%2F2">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              20 1/2</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:21">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              21</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:21+1%2F2">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              21 1/2</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:22">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              22</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:22+1%2F2">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              22 1/2</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:23">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              23</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:23+1%2F2">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              23 1/2</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:23-26">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              23-26</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:24">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              24</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:24+1%2F2">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              24 1/2</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:25">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              25</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:25+1%2F2">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              25 1/2</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:26">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              26</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:26+1%2F2">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              26 1/2</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:26-30">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              26-30</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:27">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              27</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:27+1%2F2">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              27 1/2</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:28">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              28</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:28+1%2F2">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              28 1/2</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:29">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              29</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:29+1%2F2">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              29 1/2</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:3">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              3</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:3+1%2F2">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              3 1/2</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:3+MESES">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              3 MESES</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:3+PLAZAS">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              3 PLAZAS</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:3-4">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              3-4</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:3-5">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              3-5</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:3-6">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              3-6</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:30">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              30</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:30+1%2F2">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              30 1/2</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:30+A">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              30 A</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:30+B">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              30 B</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:31">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              31</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:31+1%2F2">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              31 1/2</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:31-36">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              31-36</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:32">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              32</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:32+1%2F2">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              32 1/2</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:32+A">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              32 A</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:32+B">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              32 B</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:33">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              33</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:33+1%2F2">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              33 1/2</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:33-34">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              33-34</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:34">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              34</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:34+1%2F2">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              34 1/2</span>
+          </span>
+        </label>
+      </form>
+      </li>
+  <li>
+      <form action="#" method="get">
+        <input type="hidden" name="q" value=":modifiedtime:talla:34+A">
+        <input type="hidden" name="text" value="">
+        <label>
+          <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only">
+          <span class="facet__list__label">
+            <span class="facet__list__mark"></span>
+            <span class="facet__list__text">
+              34 A</span>
+          </span>
+        </label>
+      </form>
+      </li>
+</div>
+
+
+<script src="index.js"></script>
+
+</body>
+</html>

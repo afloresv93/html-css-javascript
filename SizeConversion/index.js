@@ -15,6 +15,6 @@ function _autoload(scriptUrl, callback) {
   document.head.appendChild(script);
 }
 
-// _autoload('mashup.js', function() {
-//   console.log('Script cargado y ejecutado.');
-// });
+_autoload('sizeConversion.js', function() {
+  console.log('Script cargado y ejecutado.');
+});

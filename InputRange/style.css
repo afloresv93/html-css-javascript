@@ -1,0 +1,40 @@
+/* Estilo del riel del input range */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 10px;
+  background-color: #ddd; /* Color del riel */
+  outline: none;
+}
+
+/* Estilo del thumb en navegadores basados en WebKit (Chrome, Safari, etc.) */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  background-color: #3498db; /* Color del thumb en WebKit */
+  border: none;
+  border-radius: 50%; /* Hace que el thumb sea circular */
+  cursor: pointer;
+}
+
+/* Estilo del thumb en Firefox */
+input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background-color: #3498db; /* Color del thumb en Firefox */
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Estilo del thumb en Microsoft Edge e Internet Explorer */
+input[type="range"]::-ms-thumb {
+  width: 20px;
+  height: 20px;
+  background-color: #3498db; /* Color del thumb en Edge e IE */
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}

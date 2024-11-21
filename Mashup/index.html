@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2t6-a06-LksSTYahVI3NAGZ7NGLM27f4"></script>
+  <script type="text/javascript" src="index.js"></script>
+</head>
+<body onload="initialize();">
+  <div id="message">
+        <i id="message-icon"></i>
+        <span id="message-text"></span>
+    </div>
+
+    <h2>
+        Arrastre el marcador de google para obtener las coordenadas
+    </h2>
+
+    <div class="box">
+        <div class="container">
+            <div class="select">
+                <select id="cmbDirecciones" onChange="changeAddress()"></select>
+            </div>
+        </div>
+
+        <div class="container_input">
+
+            <div class="group">
+                <input id="txtStreet" type="text" required />
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label>Vía</label>
+            </div>
+
+            <div class="group">
+                <input id="txtHouseNumber" type="text" maxlength="10" required />
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label>Número</label>
+            </div>
+
+            <div class="group">
+                <input id="txtStreetPostalCode" type="text" required disabled/>
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label>Código postal</label>
+            </div>
+
+            <div class="group">
+                <input id="txtLat" type="text" required />
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label>Latitud</label>
+            </div>
+        
+            <div class="group">
+                <input id="txtLng" type="text" required />
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label>Longitud</label>
+            </div>
+
+            <button id="updateCoordinate" onclick="sendCoordinates()">Confirmar <span class="load loading"></span></button>
+        </div>
+
+    </div>
+
+    <div id="map_canvas" style="width: auto; height: 500px;">
+    </div>
+</body>
+</html>

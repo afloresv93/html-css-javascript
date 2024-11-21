@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="es">
+	<head>
+	    <meta charset="utf-8">
+        <title>Correo Registro</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style type="text/css">
+            @font-face {
+                font-family: 'Avenir-Medium';
+                src:  url('http://etafashion-rm.local:9001/etafashionstorefront/_ui/responsive/theme-rm/fonts/Avenir-Medium.eot');
+                src:  url('http://etafashion-rm.local:9001/etafashionstorefront/_ui/responsive/theme-rm/fonts/Avenir-Medium.eot#iefix') format('embedded-opentype'),
+                url('http://etafashion-rm.local:9001/etafashionstorefront/_ui/responsive/theme-rm/fonts/Avenir-Medium.woff') format('woff'),
+                url('http://etafashion-rm.local:9001/etafashionstorefront/_ui/responsive/theme-rm/fonts/Avenir-Medium.svg#Avenir-Medium') format('svg');
+                font-weight: normal;
+                font-style: normal;
+                font-display: block;
+            }
+            @font-face {
+                font-family: 'Avenir-Heavy';
+                src:  url('http://etafashion-rm.local:9001/etafashionstorefront/_ui/responsive/theme-rm/fonts/Avenir-Heavy.eot');
+                src:  url('http://etafashion-rm.local:9001/etafashionstorefront/_ui/responsive/theme-rm/fonts/Avenir-Heavy.eot#iefix') format('embedded-opentype'),
+                url('http://etafashion-rm.local:9001/etafashionstorefront/_ui/responsive/theme-rm/fonts/Avenir-Heavy.woff') format('woff'),
+                url('http://etafashion-rm.local:9001/etafashionstorefront/_ui/responsive/theme-rm/fonts/Avenir-Heavy.svg#Avenir-Heavy') format('svg');
+                font-weight: normal;
+                font-style: normal;
+                font-display: block;
+            }
+            @font-face {
+                font-family: 'Avenir-Book';
+                src:  url('http://etafashion-rm.local:9001/etafashionstorefront/_ui/responsive/theme-rm/fonts/Avenir-Book.eot');
+                src:  url('http://etafashion-rm.local:9001/etafashionstorefront/_ui/responsive/theme-rm/fonts/Avenir-Book.eot#iefix') format('embedded-opentype'),
+                url('http://etafashion-rm.local:9001/etafashionstorefront/_ui/responsive/theme-rm/fonts/Avenir-Book.woff') format('woff'),
+                url('http://etafashion-rm.local:9001/etafashionstorefront/_ui/responsive/theme-rm/fonts/Avenir-Book.svg#Avenir-Book') format('svg');
+                font-weight: normal;
+                font-style: normal;
+                font-display: block;
+            }
+            .logo-container {
+                height: 70px;
+                background-color: black;
+            }
+            .logo-container img {
+                height: 30px;
+            }
+            .nav-container {
+                font-family: 'Avenir-Book', 'Arial', 'Helvetica', 'sans-serif';
+                font-size: 14px;
+                height: 40px;
+                background-color: #EBEBEB;
+                text-align: center;
+            }
+            .nav-container a {
+                color: black;
+                text-decoration: none;
+                border-right: 1px solid black;
+                padding-right: 10px;
+                padding-left: 5px;
+            }
+            .nav-container a:hover {
+                text-decoration: underline;
+                text-underline-offset: 5px;
+            }
+            .container-welcome img {
+                max-width: 95%;
+            }
+            .container-salutation {
+                padding: 15px 0px;
+                text-align: center;
+                color: black;
+            }
+            .container-salutation p {
+                font-family: 'Avenir-Book', 'Arial', 'Helvetica', 'sans-serif';
+                font-size: 13px;
+                margin: 0px;
+                line-height: 25px;
+            }
+            .container-salutation .salutation-displayName {
+                font-family: 'Avenir-Heavy', 'Arial', 'Helvetica', 'sans-serif';
+                font-size: 14px;
+                margin-bottom: 5px;
+            }
+            .container-salutation .salutation-site {
+                font-family: 'Avenir-Heavy', 'Arial', 'Helvetica', 'sans-serif';;
+            }
+            .container-promotion img {
+                max-width: 100%;
+            }
+            .container-coupon {
+                font-family: 'Avenir-Book', 'Arial', 'Helvetica', 'sans-serif';
+                font-size: 12px;
+                color: black;
+                margin: 10px auto;
+            }
+            .container-coupon p {
+                margin: 0px;
+            }
+            .container-coupon .coupon-code {
+                font-size: 17px;
+                background-color: #C50011;
+                color: white;
+                border-radius: 15px;
+                padding: 5px 20px;
+                margin: 5px 0px 10px 0px;
+            }
+            .container-coupon .coupon-valid-until {
+                font-family: 'Avenir-Heavy', 'Arial', 'Helvetica', 'sans-serif';
+                font-size: 12px;
+            }
+            .container-instructions {
+                font-family: 'Avenir-Book', 'Arial', 'Helvetica', 'sans-serif';
+                font-size: 13px;
+                margin: 10px 0px;
+                display: block;
+                text-align: center;
+                color: black;
+            }
+            .container-instructions p {
+                margin: 0px;
+            }
+            .footer {
+                min-height: 150px;
+                background-color: #EBEBEB;
+                text-align: center;
+                display: block;
+                margin-top: 10px;
+            }
+            .footer .footer-title {
+                font-family: 'Avenir-Heavy', 'Arial', 'Helvetica', 'sans-serif';
+                color: #C50011;
+                font-size: 20px;
+                font-weight: bold;
+                margin: 0px;
+                padding: 20px 0px;
+            }
+            .footer tbody {
+                display: inline-flex;
+            }
+            .container-footer {
+                padding: 0px 30px;
+            }
+            .container-footer > div {
+                display: flex;
+                padding: 0px 50px;
+            }
+            .container-footer td a {
+                width: 40px;
+                display: block;
+            }
+            .container-footer img {
+                height: 20px;
+                margin-right: 5px;
+            }
+            .container-footer p {
+                margin: 0px;
+            }
+            .footer-text {
+                font-family: 'Avenir-Heavy', 'Arial', 'Helvetica', 'sans-serif';
+                font-size: 13px;
+                color: #868686;
+            }
+            .footer-text .text-title {
+                font-family: 'Avenir-Medium', 'Arial', 'Helvetica', 'sans-serif';
+                font-weight: bold;
+                font-size: 17px;
+                color: black;
+            }
+            .footer-text .text-whatsapp a {
+                width: 100%;
+                text-decoration: none;
+                color: #868686;
+            }
+            @media (max-width: 425px) {
+                .footer tbody {
+                    display: -ms-inline-grid;
+                    display: -moz-inline-grid;
+                    display: inline-grid;
+                }
+                .footer tbody .container-footer {
+                    margin: 10px 0px;
+                    border-right: none !important;
+                }
+            }
+        </style>
+	</head>
+	<body bgcolor="#ffffff">
+		<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#ffffff">
+			<tr>
+				<td>&nbsp;</td>
+			</tr>
+			<tr>
+				<td align="center" valign="top">
+					<table width="610" border="0" align="center" cellpadding="0" cellspacing="0" bordercolor="#fff">
+						<tr>
+							<td align="center" valign="top" bgcolor="#FFFFFF">
+								<table width="570" cellpadding="0" cellspacing="0" border="0" align="center">
+									<tr>
+										<td class="logo-container">
+											<div style="text-align: center;">
+	<a href="http://etafashion-rm.local:9001/etafashionstorefront">
+        <img src="http://etafashion-rm.local:9001/etafashionstorefront/medias/logo-site.png?context=bWFzdGVyfGltYWdlc3wzNzU1fGltYWdlL3BuZ3xhVzFoWjJWekwyZ3pZeTlvWVdFdk9EYzVOakU1TlRBMk1UYzVNQzV3Ym1jfDZmZDVkNmMxYTdlMDFhMWRmZDg4NzY5YTM2MGViYzA5NzkyYWIwOTVjOTNjMTcwN2Y1NTg0NDYwN2M3OGY1OGU" alt="" border="0"/>
+    </a>
+</div>
+
+										</td>
+									</tr>
+									<tr>
+										<td class="nav-container">
+											<a href="https://etafashion-rm.local:9002/etafashionstorefront/es_RW/MUJERES/c/101?sort=modifiedtime&q=%3Arelevance#">Moda mujer</a>
+											<a href="https://etafashion-rm.local:9002/etafashionstorefront/es_RW/HOMBRES/c/102?sort=modifiedtime&q=%3Arelevance#">Moda hombre</a>
+											<a href="https://etafashion-rm.local:9002/etafashionstorefront/es_RW/CALZADO/c/105">Calzado</a>
+											<a href="https://etafashion-rm.local:9002/etafashionstorefront/es_RW/ELECTRONICA/c/000">Tecnología</a>
+											<a href="https://etafashion-rm.local:9002/etafashionstorefront/es_RW/HOGAR/c/109">Hogar</a>
+											<a style="border-right: none;" href="https://etafashion-rm.local:9002/etafashionstorefront/es_RW/DEPORTE/c/124">Exclusivos</a>
+										</td>
+									</tr>
+									<tr>
+										<td class="container-welcome">
+											<div style="text-align: center;">
+	<a href="http://etafashion-rm.local:9001/etafashionstorefront">
+        <img src="http://etafashion-rm.local:9001/etafashionstorefront/medias/welcome.png?context=bWFzdGVyfGltYWdlc3wzMDE3MzIxfGltYWdlL3BuZ3xhVzFoWjJWekwyaGhZaTlvTkRNdk9EYzVOakU1TlRFeU56TXlOaTV3Ym1jfGNlNWRiNjBlY2Q2ODFhZTZiN2JlZmRlNGI2NDU0OGZjMzc4ZmVlZjg1ZGU4MTczZDc4OWJhMmE2M2ZkNWZmMWY" alt="" border="0"/>
+    </a>
+</div>
+
+										</td>
+									</tr>
+									<tr>
+										<td class="container-salutation">
+											<p class="salutation-displayName">Estimado/a Angel -Flores</p>
+											<p>Gracias por registrarse en <span class='salutation-site'>MODARM.COM</span>, esperamos que disfrute de sus compras.</p>
+											<p>La dirección de correo electrónico registrada es: angelfv.93@gmail.com.</p>
+										</td>
+									</tr>
+									<tr>
+										<td class="container-promotion">
+											<div style="text-align: center;">
+	<a href="http://etafashion-rm.local:9001/etafashionstorefront">
+        <img src="http://etafashion-rm.local:9001/etafashionstorefront/medias/promotion.png?context=bWFzdGVyfGltYWdlc3wyMzYwNHxpbWFnZS9wbmd8YVcxaFoyVnpMMmc0TlM5b01UZ3ZPRGM1TmpFNU5URTVNamcyTWk1d2JtY3w5MGZmMjgwZmUyYmNhMzkzY2MxYjk1YTRhNmY3MTJlMmZkMmU5MDVmYmQzZjEzMjE3NjhhYTEzZjY3Yjk2ZDVl" alt="" border="0"/>
+    </a>
+</div>
+
+										</td>
+									</tr>
+									<tr>
+										<td style="text-align: center;">
+                                            <table class="container-coupon" cellpadding="0" cellspacing="0" border="0" align="center">
+                                                <tr>
+                                                    <td><p>Código:</p></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><p class="coupon-code">RM-PRIMERA-COMPRA</p></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><p class="coupon-valid-until">Válido hasta 02 de noviembre 2023</p></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+									</tr>
+									<tr>
+										<td class="container-instructions">
+											<p>Para empezar a comprar, haga clic aquí: <a href='https://etafashion-rm.local:9002/etafashionstorefront/es_RW'>https://etafashion-rm.local:9002/etafashionstorefront/es_RW</a><br><br>
+											Para acceder a su cuenta, haga clic aquí: <a href=https://etafashion-rm.local:9002/etafashionstorefront/es_RW>Mi cuenta</a><br><br>
+											Si ha olvidado su contraseña, puede restablecerla en cualquier momento haciendo clic en este vínculo: <a href=https://etafashion-rm.local:9002/etafashionstorefront/es_RW/login/pw/request/external>Actualizar mi contraseña</a></p><br>
+											<p>Si tiene alguna duda, utilice la página <a href='https://etafashion-rm.local:9002/etafashionstorefront/es_RW/contact'>Contacto</a> o bien póngase directamente en contacto con nuestro equipo de servicio al cliente llamando al (02) 4010100 opción 7 o por correo electrónico <a href='mailto:servicio.cliente@etafashion.com'>servicio.cliente@etafashion.com</a>.</p>
+										</td>
+									</tr>
+									<tr>
+										<td class="footer">
+											<p class="footer-title">Si necesitas ayuda comunícate con nosotros:</p>
+											<table width="100%" cellpadding="0" cellspacing="0" border="0" align="center">
+											    <tr class="container-footer" style="border-right: 1px solid #CBCBCB;">
+											        <td><div style="text-align: center;">
+	<a href="http://etafashion-rm.local:9001/etafashionstorefront">
+        <img src="http://etafashion-rm.local:9001/etafashionstorefront/medias/callCenter.png?context=bWFzdGVyfGltYWdlc3wxMTM0NHxpbWFnZS9wbmd8YVcxaFoyVnpMMmcyTUM5b01EWXZPRGM1TmpFNU5USTFPRE01T0M1d2JtY3w4YTkxNjA1MDM2MjZhYzY0ZTFhOTU1ZDcxOTQwYzdlOGQ1MTRmNjg2Y2YzZjExZjg2MzYxNDZmYjMxOTU2YmNj" alt="" border="0"/>
+    </a>
+</div>
+</td>
+											        <td>
+											            <div class="footer-text">
+                                                            <p class="text-title">Call Center</p>
+                                                            <p>(02) 4010 100</p>
+                                                            <p>L-V: 9H00 - 19h00</p>
+                                                        </div>
+											        </td>
+											    </tr>
+                                                <tr class="container-footer">
+                                                    <td><div style="text-align: center;">
+	<a href="http://etafashion-rm.local:9001/etafashionstorefront">
+        <img src="http://etafashion-rm.local:9001/etafashionstorefront/medias/whatsapp.png?context=bWFzdGVyfGltYWdlc3wxMDAxMXxpbWFnZS9wbmd8YVcxaFoyVnpMMmcyWXk5b1kyTXZPRGM1TmpFNU5UTXlNemt6TkM1d2JtY3xjNGU5NjNhMTQ5YTVmYzcwZDZjMjdmZDkyYzdhYzE4NjMxMmQzNTRkYzJhZWJjNGM1Njg0NGM3Yjg5ODk4M2I1" alt="" border="0"/>
+    </a>
+</div>
+</td>
+                                                    <td>
+                                                        <div class="footer-text">
+                                                            <p class="text-title">Whatsapp</p>
+                                                            <p class="text-whatsapp"><a href="https://wa.me/+593962974444?text=Hola, tengo una consulta" target="_blank">+593 962 974 444</a></p>
+                                                            <p>L-D: 9H00 - 18h00</p>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>
+
